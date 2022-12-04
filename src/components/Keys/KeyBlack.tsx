@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function KeyBlack({ dProp, sound }: { dProp: string, sound?:any }) {
+export default function KeyBlack({ dProp, sound, letter }: { dProp: string, sound?:any, letter?:string }) {
   const [over, setOver] = useState(false);
   const audio = new Audio(sound);
+
+  const handleKeyPress = (event:any) => {
+    if(letter && event.key === letter){
+      audio.play();
+    }
+  }
+
+  useEffect(()=>{
+    document.addEventListener("keydown", handleKeyPress, false);
+  },[])
 
   return (
     <>

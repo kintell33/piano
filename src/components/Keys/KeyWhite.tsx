@@ -1,14 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function KeyWhite({
   dProp,
   sound,
+  letter
 }: {
   dProp: string;
   sound?: any;
+  letter:string;
 }) {
   const [over, setOver] = useState(false);
   const audio = new Audio(sound);
+
+  const handleKeyPress = (event:any) => {
+    if(event.key === letter){
+      audio.play();
+    }
+  }
+
+  useEffect(()=>{
+    document.addEventListener("keydown", handleKeyPress, false);
+  },[])
 
   return (
     <svg
