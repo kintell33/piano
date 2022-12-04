@@ -1,0 +1,15 @@
+.whiteContainer {
+    display:flex;
+    justify-content: center;
+    margin-top: 10vh;
+    width: 100%;
+    gap:10px;
+}
+
+.blackContainer {
+    display:flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    gap:40px;
+}
