@@ -12,7 +12,7 @@ export default function KeyWhite({
   const [over, setOver] = useState(false);
   const audio = new Audio(sound);
 
-  const handleKeyPress = (event:any) => {
+  const handleKeyPress = async (event:any) => {
     if(event.key === letter){
       audio.play();
     }
