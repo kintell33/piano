@@ -22,8 +22,8 @@ export default function KeyBlack({ dProp }: { dProp: string }) {
           <path d={dProp} fill={over ? "#f40082" : "#000000"} />
         </svg>
       ) : (
-        <div style={{ width: "105" }}>
-            <span>&#160</span>
+        <div style={{ width: "80px" }}>
+            &nbsp;
         </div>
       )}
     </>

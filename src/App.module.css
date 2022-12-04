@@ -1,8 +1,15 @@
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .whiteContainer {
     display:flex;
     justify-content: center;
-    margin-top: 10vh;
-    width: 100%;
+    margin-top: 100px;
+    width: 1400px;
     gap:10px;
 }
 
@@ -10,6 +17,7 @@
     display:flex;
     justify-content: center;
     position: fixed;
-    width: 100%;
-    gap:40px;
+    width: 1300px;
+    gap:25px;
+    top:110px;
 }
