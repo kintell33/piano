@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-export default function KeyBlack({ dProp }: { dProp: string }) {
+export default function KeyBlack({ dProp, sound }: { dProp: string, sound?:any }) {
   const [over, setOver] = useState(false);
+  const audio = new Audio(sound);
 
   return (
     <>
@@ -17,6 +18,9 @@ export default function KeyBlack({ dProp }: { dProp: string }) {
           }}
           onMouseLeave={() => {
             setOver(false);
+          }}
+          onClick={() => {
+            audio.play();
           }}
         >
           <path d={dProp} fill={over ? "#f40082" : "#000000"} />
